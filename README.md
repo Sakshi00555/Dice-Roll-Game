@@ -13,7 +13,7 @@ No Greed is a single page, 3-player dice game which showcases my JavaScript logi
 
 ## Live Demo
 
-[Live Demo Link](https://elmejdki.github.io/githubProfileFinder/)
+[Live Demo Link](https://endearing-torrone-11f48b.netlify.app/)
 
 ## Getting Started
 
