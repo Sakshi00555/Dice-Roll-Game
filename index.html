@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content
+		="width=device-width, initial-scale=1.0">
+	<title>Dice Game</title>
+
+	<link rel="stylesheet" href="index.css">
+	
+</head>
+
+<body>
+	<div id="container">
+		<h1 id="winner">Let's Play</h1>
+
+		<div id="member-1">
+			<p class="Player1">Member A</p>
+			<div class="box" ><p class="p1"></p></div>
+		</div>
+
+		<div id="member-2">
+			<p class="Player2">Member B</p>
+			<div class="box" ><p class="p2"></p></div>
+		</div>
+        <div id="member-3">
+			<p class="Player3">Member C</p>
+			<div class="box" ><p class="p3"></p></div>
+		</div>
+	</div>
+
+	<div id="container_bottom">
+		<button type="button" class="butn" onClick="rollTheDice()">ROLL THE DICE</button>
+	</div>
+	
+
+	<script>
+
+		
+
+		// Function to roll the dice
+		function rollTheDice() {
+			setTimeout(function () {
+				var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+                localStorage.setItem("randomnum1", randomNumber1)
+
+				var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+                localStorage.setItem("randomnum2", randomNumber2)
+
+                var randomNumber3 = Math.floor(Math.random() * 6) + 1;
+                localStorage.setItem("randomnum3", randomNumber3)
+
+               
+                var random1 = localStorage.getItem("randomnum1");
+                var random2 = localStorage.getItem("randomnum2");
+                var random3 = localStorage.getItem("randomnum3");
+                console.log(random1)
+                console.log(random2)
+                console.log(random3)
+
+
+				document.querySelector(".p1").innerText = random1;
+				document.querySelector(".p2").innerText = random2;
+                document.querySelector(".p3").innerText = random3;
+				var arr=[random1, random2, random3]
+				
+				
+				arr1=arr.sort().reverse()
+				console.log(arr1)
+			for(var i=0;i<arr.length;i++){
+				if(random2==random1 || random1==random3 || random2==random3){
+					document.querySelector("h1").innerHTML="Draw";
+					document.querySelector("#member-1").style.background="blue";
+					document.querySelector("#member-2").style.background="blue";
+					document.querySelector("#member-3").style.background="blue";
+
+				}
+				
+				else{
+					for(var i=0;i<arr.length;i++){
+					if(arr1[0]==random1){
+					//console.log(arr[i],arr1[i])
+					document.querySelector("#winner").innerHTML="Winner A";
+					document.querySelector("#member-1").style.background="Green";
+					}
+					else if(arr1[0]==random2){
+					//console.log(arr[i],arr1[i])
+					document.querySelector("#winner").innerHTML="Winner B";
+					document.querySelector("#member-2").style.background="Green";
+					}
+					else if(arr1[0]==random3){
+					//console.log(arr[i],arr1[i])
+					document.querySelector("#winner").innerHTML="Winner C";
+					document.querySelector("#member-3").style.background="Green";
+					}
+					if(arr1[1]==random1){
+					//console.log(arr[i],arr1[i])
+					document.querySelector("#member-1").style.background="Yellow";
+					}
+					else if(arr1[1]==random2){
+					//console.log(arr[i],arr1[i])
+					document.querySelector("#member-2").style.background="Yellow";
+					}
+					else if(arr1[1]==random3){
+					//console.log(arr[i],arr1[i])
+					document.querySelector("#member-3").style.background="Yellow";
+					}
+					if(arr1[2]==random1){
+					//console.log(arr[i],arr1[i])
+					document.querySelector("#member-1").style.background="Red";
+					}
+					else if(arr1[2]==random2){
+					//console.log(arr[i],arr1[i])
+					document.querySelector("#member-2").style.background="Red";
+					}
+					else if(arr1[2]==random3){
+					//console.log(arr[i],arr1[i])
+					document.querySelector("#member-3").style.background="Red";
+					}
+				
+					}
+				}
+			}
+			
+			
+		})
+                
+
+
+
+        }
+	</script>
+</body>
+
+</html>

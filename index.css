@@ -1,0 +1,86 @@
+#container {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    /* border: 1px red solid; */
+}
+
+#member-1{
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+#member-2{
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+#member-3{
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+body {
+    background-color: #0b0202;
+    margin: 0;
+}
+
+h1 {
+    margin: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 5px 0 #232931;
+    font-size: 4.5rem;
+    color: #4ecca3;
+    text-align: center;
+}
+
+p {
+    font-size: 2rem;
+    color: #4ecca3;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+#bottom {
+    padding-top: 30px;
+}
+
+.butn {
+    background: #4ecca3;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 7px;
+    color: #ffff;
+    font-size: 30px;
+    padding: 16px 25px 16px 25px;
+    text-decoration: none;
+}
+
+.butn:hover {
+    background: #232931;
+    text-decoration: none;
+}.box{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    
+
+}
+#container_bottom{
+    text-align: center;
+    /* border: 1px red solid; */
+}
+#container>#member-1>div{
+    margin-left: 50px;
+    text-align: center;
+}
+#container>#member-2>div{
+    margin-left: 50px;
+    text-align: center;
+}
+#container>#member-3>div{
+    margin-left: 50px;
+    text-align: center;
+}
